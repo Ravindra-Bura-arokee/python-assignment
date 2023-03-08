@@ -8,7 +8,8 @@ class Employee():
         self.__password = password
         self.first_name = first_name
         self.last_name = last_name
-        self.dob = dob
+        self.dob = dob,
+        self.salary = salary
 
     def get_full_name(self):
         return self.first_name +' '+ self.last_name

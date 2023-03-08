@@ -1,0 +1,183 @@
+[
+    {
+        "label": "Employee",
+        "importPath": "employee",
+        "description": "employee",
+        "isExtraImport": true,
+        "detail": "employee",
+        "documentation": {}
+    },
+    {
+        "label": "Employee",
+        "importPath": "employee",
+        "description": "employee",
+        "isExtraImport": true,
+        "detail": "employee",
+        "documentation": {}
+    },
+    {
+        "label": "Employee",
+        "importPath": "employee",
+        "description": "employee",
+        "isExtraImport": true,
+        "detail": "employee",
+        "documentation": {}
+    },
+    {
+        "label": "abc",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "abc",
+        "description": "abc",
+        "detail": "abc",
+        "documentation": {}
+    },
+    {
+        "label": "DeveloperEmployee",
+        "importPath": "developer_employee",
+        "description": "developer_employee",
+        "isExtraImport": true,
+        "detail": "developer_employee",
+        "documentation": {}
+    },
+    {
+        "label": "HumanResourceEmployee",
+        "importPath": "human_resource_employee",
+        "description": "human_resource_employee",
+        "isExtraImport": true,
+        "detail": "human_resource_employee",
+        "documentation": {}
+    },
+    {
+        "label": "MongoClient",
+        "importPath": "pymongo",
+        "description": "pymongo",
+        "isExtraImport": true,
+        "detail": "pymongo",
+        "documentation": {}
+    },
+    {
+        "label": "MongoClient",
+        "importPath": "pymongo",
+        "description": "pymongo",
+        "isExtraImport": true,
+        "detail": "pymongo",
+        "documentation": {}
+    },
+    {
+        "label": "ObjectId",
+        "importPath": "bson.objectid",
+        "description": "bson.objectid",
+        "isExtraImport": true,
+        "detail": "bson.objectid",
+        "documentation": {}
+    },
+    {
+        "label": "DeveloperEmployee",
+        "kind": 6,
+        "importPath": "developer_employee",
+        "description": "developer_employee",
+        "peekOfCode": "class DeveloperEmployee(Employee):\n    def __init__(self, id, email, password, first_name, last_name, dob, salary, programming_language):\n        super().__init__(id, email, password, first_name, last_name, dob, salary)\n        self.programming_language = programming_language\n    def display(self):\n        return {\n            \"first_name\": self.first_name,\n            \"last_name\": self.last_name,\n            \"email\": self.email,\n            \"password\": self.__password,",
+        "detail": "developer_employee",
+        "documentation": {}
+    },
+    {
+        "label": "Employee",
+        "kind": 6,
+        "importPath": "employee",
+        "description": "employee",
+        "peekOfCode": "class Employee():\n    def __init__(self, id, email, password, first_name, last_name, dob, salary):\n        self._id= id\n        self.email=email\n        self.__password = password\n        self.first_name = first_name\n        self.last_name = last_name\n        self.dob = dob,\n        self.salary = salary\n    def get_full_name(self):",
+        "detail": "employee",
+        "documentation": {}
+    },
+    {
+        "label": "HumanResourceEmployee",
+        "kind": 6,
+        "importPath": "human_resource_employee",
+        "description": "human_resource_employee",
+        "peekOfCode": "class HumanResourceEmployee(Employee):\n    def __init__(self, id, email, password, first_name, last_name, dob, salary, specialty):\n        super().__init__(id, email, password, first_name, last_name, dob, salary)\n        self.specialty = specialty\n    def display(self):\n        print(f\"id:{self._id}, Full Name:{self.first_name+' '+self.last_name}, Email:{self.email}, specialty:{self.specialty}\")\n    def get_specialty(self):\n        print(f\"HR specialty is {self.specialty}\")\n# HR = HumanResourceEmployee(1, \"ravindr@dummy.com\", 1234567890, \"Ravindra\", \"Bura\", '12-08-2000', '120000', 'Labor Relations Specialist')\n# HR.get_specialty()",
+        "detail": "human_resource_employee",
+        "documentation": {}
+    },
+    {
+        "label": "EmployeeManagement",
+        "kind": 6,
+        "importPath": "managment",
+        "description": "managment",
+        "peekOfCode": "class EmployeeManagement:\n    def __init__(self):\n        self._employees = []\n    def addEmployee(self, employee):\n        print(employee)\n        newEmployee = collection.insert_one(employee)\n        print(newEmployee)\n        return newEmployee\n    def fetchEmployeeById(self, employee_id):\n        employee = collection.find_one({\"_id\": ObjectId(employee_id)})",
+        "detail": "managment",
+        "documentation": {}
+    },
+    {
+        "label": "client",
+        "kind": 5,
+        "importPath": "managment",
+        "description": "managment",
+        "peekOfCode": "client = MongoClient(\"mongodb://localhost:27017\")\ndb = client['python']\ncollection = db['users']\nprint(\"Connection Successful\")\nclass EmployeeManagement:\n    def __init__(self):\n        self._employees = []\n    def addEmployee(self, employee):\n        print(employee)\n        newEmployee = collection.insert_one(employee)",
+        "detail": "managment",
+        "documentation": {}
+    },
+    {
+        "label": "db",
+        "kind": 5,
+        "importPath": "managment",
+        "description": "managment",
+        "peekOfCode": "db = client['python']\ncollection = db['users']\nprint(\"Connection Successful\")\nclass EmployeeManagement:\n    def __init__(self):\n        self._employees = []\n    def addEmployee(self, employee):\n        print(employee)\n        newEmployee = collection.insert_one(employee)\n        print(newEmployee)",
+        "detail": "managment",
+        "documentation": {}
+    },
+    {
+        "label": "collection",
+        "kind": 5,
+        "importPath": "managment",
+        "description": "managment",
+        "peekOfCode": "collection = db['users']\nprint(\"Connection Successful\")\nclass EmployeeManagement:\n    def __init__(self):\n        self._employees = []\n    def addEmployee(self, employee):\n        print(employee)\n        newEmployee = collection.insert_one(employee)\n        print(newEmployee)\n        return newEmployee",
+        "detail": "managment",
+        "documentation": {}
+    },
+    {
+        "label": "management",
+        "kind": 5,
+        "importPath": "managment",
+        "description": "managment",
+        "peekOfCode": "management = EmployeeManagement()\n# add employees\ndeveloper_employee = DeveloperEmployee(1, \"ravindr@dummy.com\", 1234567890, \"Ravindra\", \"Bura\", '12-08-2000', '120000', 'python').display();\ndeveloper_employee1 = DeveloperEmployee(2, \"naruto@dummy.com\", 1234567890, \"Naruto\", \"Uzumaki\", '12-08-1995', '1550000', 'JavaScript').display()\n# HumanResourceEmployee = HumanResourceEmployee(3, \"sasuke@dummy.com\", 1234567890, \"Sasuke\", \"Uchiha\", '12-08-1995', '125000', 'Java')\n# print(developer_employee1)\nmanagement.addEmployee(developer_employee)\nmanagement.addEmployee(developer_employee1)\n# management.addEmployee(HumanResourceEmployee)\nmanagement.fetchEmployeeById('640771d5f6b60b22f3530da0')",
+        "detail": "managment",
+        "documentation": {}
+    },
+    {
+        "label": "developer_employee",
+        "kind": 5,
+        "importPath": "managment",
+        "description": "managment",
+        "peekOfCode": "developer_employee = DeveloperEmployee(1, \"ravindr@dummy.com\", 1234567890, \"Ravindra\", \"Bura\", '12-08-2000', '120000', 'python').display();\ndeveloper_employee1 = DeveloperEmployee(2, \"naruto@dummy.com\", 1234567890, \"Naruto\", \"Uzumaki\", '12-08-1995', '1550000', 'JavaScript').display()\n# HumanResourceEmployee = HumanResourceEmployee(3, \"sasuke@dummy.com\", 1234567890, \"Sasuke\", \"Uchiha\", '12-08-1995', '125000', 'Java')\n# print(developer_employee1)\nmanagement.addEmployee(developer_employee)\nmanagement.addEmployee(developer_employee1)\n# management.addEmployee(HumanResourceEmployee)\nmanagement.fetchEmployeeById('640771d5f6b60b22f3530da0')\nmanagement.searchEmployeeByEmail(\"naruto@dummy.com\")\nmanagement.deleteEmployee(\"naruto@dummy.com\")",
+        "detail": "managment",
+        "documentation": {}
+    },
+    {
+        "label": "developer_employee1",
+        "kind": 5,
+        "importPath": "managment",
+        "description": "managment",
+        "peekOfCode": "developer_employee1 = DeveloperEmployee(2, \"naruto@dummy.com\", 1234567890, \"Naruto\", \"Uzumaki\", '12-08-1995', '1550000', 'JavaScript').display()\n# HumanResourceEmployee = HumanResourceEmployee(3, \"sasuke@dummy.com\", 1234567890, \"Sasuke\", \"Uchiha\", '12-08-1995', '125000', 'Java')\n# print(developer_employee1)\nmanagement.addEmployee(developer_employee)\nmanagement.addEmployee(developer_employee1)\n# management.addEmployee(HumanResourceEmployee)\nmanagement.fetchEmployeeById('640771d5f6b60b22f3530da0')\nmanagement.searchEmployeeByEmail(\"naruto@dummy.com\")\nmanagement.deleteEmployee(\"naruto@dummy.com\")\nmanagement.fetchAllEmployees()",
+        "detail": "managment",
+        "documentation": {}
+    },
+    {
+        "label": "client",
+        "kind": 5,
+        "importPath": "py-mongo-db",
+        "description": "py-mongo-db",
+        "peekOfCode": "client = MongoClient(\"mongodb://localhost:27017\")\ndb = client['python']\nprint(\"Connection Successful\")\n# print(\"List of databases\")\n# print(client.list_database_names())\nclient.close()",
+        "detail": "py-mongo-db",
+        "documentation": {}
+    },
+    {
+        "label": "db",
+        "kind": 5,
+        "importPath": "py-mongo-db",
+        "description": "py-mongo-db",
+        "peekOfCode": "db = client['python']\nprint(\"Connection Successful\")\n# print(\"List of databases\")\n# print(client.list_database_names())\nclient.close()",
+        "detail": "py-mongo-db",
+        "documentation": {}
+    }
+]
